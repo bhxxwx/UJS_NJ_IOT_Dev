@@ -1578,10 +1578,6 @@ void USB_LP_CAN1_RX0_IRQHandler(void)
 {
 	CanRxMsg RxMessage;
 	CAN_Receive(CAN1, CAN_FIFO0, &RxMessage);
-
-
-//	USB_Istr();
-
 }
 #endif
 #if defined(STM32F10X_CL)
