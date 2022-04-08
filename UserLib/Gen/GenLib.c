@@ -70,7 +70,7 @@ void usart_1_init(int bandrate)
 
 	//Usart1 NVIC
 	NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1; //抢占优先级
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2; //抢占优先级
 	//NVIC_InitStructure.NVIC_IRQChannelSubPriority = 3;//响应优先级
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
@@ -1443,7 +1443,7 @@ void CAN_IT_INIT()
 #if defined(STM32F10X_CL)
 	NVIC_InitStructure.NVIC_IRQChannel = CAN1_RX0_IRQn;
 #endif
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 6;
 //	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);

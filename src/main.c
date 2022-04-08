@@ -6,10 +6,12 @@
 #include "task.h"
 #include "queue.h"
 #include "timers.h"
+//#include<pthread.h>
+
 int main()
 {
 	DBGMCU_Config(DBGMCU_IWDG_STOP, ENABLE); //DEBUG时看门狗关闭
-
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 	CAN_IT_INIT();
 
 	vTaskStartScheduler();
