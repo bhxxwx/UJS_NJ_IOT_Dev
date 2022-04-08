@@ -1574,11 +1574,11 @@ void CAN_IT_SEND(CanTxMsg TxMessage)
  * CAN/USB总线接收中断
  */
 #if defined(STM32F10X_HD) || defined(STM32F10X_MD) || defined(STM32F10X_LD)
-void USB_LP_CAN1_RX0_IRQHandler(void)
-{
-	CanRxMsg RxMessage;
-	CAN_Receive(CAN1, CAN_FIFO0, &RxMessage);
-}
+//void USB_LP_CAN1_RX0_IRQHandler(void)
+//{
+//	CanRxMsg RxMessage;
+//	CAN_Receive(CAN1, CAN_FIFO0, &RxMessage);
+//}
 #endif
 #if defined(STM32F10X_CL)
 void CAN1_RX0_IRQHandler()
